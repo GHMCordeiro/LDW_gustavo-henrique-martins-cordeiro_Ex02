@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center mt-5 mb-5">
+    <div class="col-md-8 border rounded p-5 bg-light">
+        <form action="{{url_for('cadBook')}}" method="POST">
+            <div class="form-group text-center mb-5">
+                <h2>Cadastro</h2>
+            </div>
+            <div class="form-group">
+                <label for="" class="label-control">Título:</label>
+                <input type="text" name="titulo" class="form-control" required>
+
+                <label for="" class="label-control">Ano:</label>
+                <input type="text" name="ano" class="form-control" required>
+
+                <label for="" class="label-control">Autor:</label>
+                <input type="text" name="autor" class="form-control" required>
+
+                <input type="submit" value="Cadastrar" class="btn btn-dark form-control mt-4">
+            </div>
+        </form>
+
+        <hr class="mt-5">
+
+        <table class="table mt-5">
+            <tr class="center">
+                <th class="center border text-center bg-dark text-white">Título</th>
+                <th class="center border text-center bg-dark text-white">Ano</th>
+                <th class="center border text-center bg-dark text-white">Autor</th>
+                <th colspan="2" class="center border text-center bg-dark text-white">Ações</th>
+            </tr>
+            {% for livro in livros_list %}
+            <tr class="text-center">
+                <td class="border">{{livro.titulo}}</td>
+                <td class="border">{{livro.ano}}</td>
+                <td class="border">{{livro.autor}}</td>
+                <td class="border"></td>
+                <td class="border"></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+{% endblock content %}

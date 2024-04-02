@@ -1,0 +1,55 @@
+.menu{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: 0.8;
+}
+
+footer{
+    margin-top: 10%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-index{
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.conteudo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+body{
+    background-image: url('../img/livros.png');
+    background-size: cover;
+    background-position: center;
+}
